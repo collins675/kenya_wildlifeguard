@@ -1,0 +1,18 @@
+
+# Local database configuration
+config/db.php
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Temporary and system files
+*.log
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local database exports
+*.sql.gz
+*.sql.zip
