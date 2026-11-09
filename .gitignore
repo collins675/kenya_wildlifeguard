@@ -1,18 +1,14 @@
-
-# Local database configuration
+# Never publish local database credentials or environment secrets
 config/db.php
-
-# Environment files
 .env
 .env.*
 !.env.example
 
-# Temporary and system files
+# User-submitted evidence is private and must not be committed
+private_uploads/*
+!private_uploads/.htaccess
+
 *.log
 .vscode/
 .DS_Store
 Thumbs.db
-
-# Local database exports
-*.sql.gz
-*.sql.zip

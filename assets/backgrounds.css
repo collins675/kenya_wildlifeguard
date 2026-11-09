@@ -1,0 +1,80 @@
+/*
+ * Kenya WildlifeGuard — Background Image Settings
+ * ================================================
+ * Change photos in ONE place: the variables immediately below.
+ * Image files belong in: assets/wildlife/
+ * Paths here are relative to assets/backgrounds.css.
+ *
+ * Example: copy lion-new.jpg into assets/wildlife/ and change
+ * --citizen-banner-photo: url("wildlife/lion-new.jpg");
+ *
+ * The pale overlay on dashboard backgrounds keeps forms and
+ * report cards easy to read. The images are decorative only.
+ */
+
+:root {
+    /* Public pages */
+    --home-banner-photo: url("wildlife/elephant-hero.webp");
+    --login-background-photo: url("wildlife/lion.webp");
+
+    /* Full-screen dashboard backgrounds */
+    --citizen-page-photo: url("wildlife/savannah.webp");
+    --ranger-page-photo: url("wildlife/zebras.webp");
+    --officer-page-photo: url("wildlife/grazing.webp");
+
+    /* The large welcome banner in each dashboard */
+    --citizen-banner-photo: url("wildlife/elephant-hero.webp");
+    --ranger-banner-photo: url("wildlife/zebra-herd.webp");
+    --officer-banner-photo: url("wildlife/wildebeest.webp");
+
+    /* Small photo at the bottom of the navigation sidebar */
+    --sidebar-background-photo: url("wildlife/elephant-forest.webp");
+}
+
+/* Home page and login/registration screens */
+.hero.home-wildlife-hero {
+    background-image:
+        linear-gradient(90deg, rgba(8,43,38,.95), rgba(8,57,44,.72) 45%, rgba(19,49,30,.12)),
+        var(--home-banner-photo);
+    background-position: center 47%;
+    background-size: cover;
+}
+.auth-intro {
+    background-image:
+        linear-gradient(0deg, rgba(10,57,45,.98), rgba(11,61,44,.65) 60%, rgba(10,53,40,.1)),
+        var(--login-background-photo);
+    background-position: center;
+    background-size: cover;
+}
+
+/* Main page background, visible around the cards on all three dashboards. */
+.main-panel {
+    --dashboard-photo: var(--citizen-page-photo);
+    background-image:
+        linear-gradient(rgba(244,249,246,.91), rgba(244,249,246,.94)),
+        var(--dashboard-photo);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.main-panel.role-citizen { --dashboard-photo: var(--citizen-page-photo); }
+.main-panel.role-ranger  { --dashboard-photo: var(--ranger-page-photo); }
+.main-panel.role-officer { --dashboard-photo: var(--officer-page-photo); }
+
+/* Welcome banners and sidebar */
+.hero-citizen { background-image: var(--citizen-banner-photo); }
+.hero-ranger  { background-image: var(--ranger-banner-photo); }
+.hero-officer { background-image: var(--officer-banner-photo); }
+.sidebar-photo {
+    background-image:
+        linear-gradient(0deg, rgba(7,53,37,.93), rgba(11,71,39,.1) 75%),
+        var(--sidebar-background-photo);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Avoid jumpy scrolling on mobile devices. */
+@media (max-width: 700px) {
+    .main-panel { background-attachment: scroll; }
+}

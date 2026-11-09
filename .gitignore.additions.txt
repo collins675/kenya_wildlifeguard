@@ -1,0 +1,7 @@
+# Add to the .gitignore in your project root:
+config/db.php
+.env
+.env.*
+private_uploads/*
+!private_uploads/.htaccess
+*.log

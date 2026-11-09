@@ -8,6 +8,8 @@ $pageTitle = $pageTitle ?? 'Kenya WildlifeGuard';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= e($pageTitle) ?> | Kenya WildlifeGuard</title>
     <link rel="stylesheet" href="<?= e(BASE_URL) ?>/assets/style.css">
+    <link rel="stylesheet" href="<?= e(BASE_URL) ?>/assets/wildlife-site.css?v=4">
+    <link rel="stylesheet" href="<?= e(BASE_URL) ?>/assets/backgrounds.css?v=1">
 </head>
 <body>
 <header class="site-header">
